@@ -6,6 +6,9 @@ from catalog.models import Category, Product
 class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
+        Category.objects.all().delete()
+        Product.objects.all().delete()
+
         with open('data.json', encoding='utf-8') as json_file:
             data = json.load(json_file)
 
