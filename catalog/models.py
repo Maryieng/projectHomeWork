@@ -14,8 +14,6 @@ class Category(models.Model):
     class Meta:
         verbose_name = ("Категория")
         verbose_name_plural = ("Категории")
-#  Product.objects.create(product_name="Морозильная камера", description="Техника для дома", сategory=now, price=40000)
-#  noow = Category.objects.reverse()[2]
 
 class Product(models.Model):
     product_name = models.CharField(max_length=50, verbose_name='Наименование')
@@ -32,4 +30,3 @@ class Product(models.Model):
     class Meta:
         verbose_name = ("Товар")
         verbose_name_plural = ("Товары")
-# Category.objects.all().delete()
