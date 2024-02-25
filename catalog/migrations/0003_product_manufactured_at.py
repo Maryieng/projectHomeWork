@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='product',
             name='manufactured_at',
-            field=models.DateField(default='12-21-16', verbose_name='Дата производства продукта'),
+            field=models.DateField(default='2020-10-16', verbose_name='Дата производства продукта'),
             preserve_default=False,
         ),
     ]
