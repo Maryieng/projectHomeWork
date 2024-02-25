@@ -24,7 +24,7 @@ class Command(BaseCommand):
                 if product["model"] == "catalog.product":
                     product_for_create.append(Product(product_name=product["fields"]['product_name'],
                                                       description=product["fields"]['description'],
-                                                      category=Category.objects.get(pk=product["pk"]),
+                                                      category=Category.objects.get(pk=product["fields"]['category']),
                                                       price=product["fields"]['price']))
 
             Product.objects.bulk_create(product_for_create)
