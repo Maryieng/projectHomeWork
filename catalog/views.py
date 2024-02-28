@@ -13,3 +13,8 @@ def contacts(request):
         message = request.POST.get('message')
         print(f'Name: {name}, Phone: {phone}, Message: {message}')
     return render(request, 'main/contacts.html')
+
+
+def product(request):
+
+    return render(request, 'main/product.html')
