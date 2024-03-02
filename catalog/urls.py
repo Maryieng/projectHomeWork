@@ -5,5 +5,5 @@ from catalog.views import index, contacts, product_info
 urlpatterns = [
     path('', index),
     path('contacts/', contacts),
-    path('products_info/', product_info),
+    path('products_info/<int:pk>/', product_info, name='products_info'),
 ]
