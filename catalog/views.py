@@ -22,9 +22,3 @@ def product_info(request, pk):
     category_item = {'object': Product.objects.get(pk=pk)}
 
     return render(request, 'main/product_info.html', context=category_item)
-
-
-def product(request):
-    context_list = {'object_list': Product.objects.all()}
-
-    return render(request, 'main/home.html', context_list)
