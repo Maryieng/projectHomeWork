@@ -4,8 +4,9 @@ from catalog.models import Product
 
 
 def index(request):
+    context_list = {'object_list': Product.objects.all()}
 
-    return render(request, 'main/home.html')
+    return render(request, 'main/home.html', context=context_list)
 
 
 def contacts(request):
@@ -20,10 +21,10 @@ def contacts(request):
 def product_info(request, pk):
     category_item = {'object': Product.objects.get(pk=pk)}
 
-    return render(request, 'catalog/product_detail.html', category_item)
+    return render(request, 'main/product_info.html', context=category_item)
 
 
-def whole_list(request):
+def product(request):
     context_list = {'object_list': Product.objects.all()}
 
-    return render(request, 'catalog/product_list.html', context_list)
+    return render(request, 'main/home.html', context_list)

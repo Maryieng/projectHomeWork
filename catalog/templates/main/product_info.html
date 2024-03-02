@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% load my_tags %}
+
+{% block title %} Инфо {% endblock %}
+
+{% block content %}
+
+
+<h1 align="center"> О товаре {{object.name}}</h1>
+
+<div class="card px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" style="width: 24rem;">
+  <img src="{{object.imagine_url|show_img }}" class="card-img-top" alt="Картинка товара">
+  <div class="card-body">
+    <h5 class="card-title">{{ object.nomination | upper}}</h5>
+    <p class="card-text">Описание: {{ object.description }}</p>
+    <p class="card-text">Категория: {{ object.category }}</p>
+
+    <a href="#" class="btn btn-primary"> Стоимость {{object.price | floatformat:'2'}} ₴</a>
+  </div>
+</div>
+{% endblock %}
