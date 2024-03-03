@@ -3,7 +3,7 @@ from django.shortcuts import render
 from catalog.models import Product
 
 
-def index(request):
+def home(request):
     context_list = {'object_list': Product.objects.all()}
 
     return render(request, 'main/home.html', context=context_list)
