@@ -24,7 +24,7 @@
                         <li>{{ object.category }}</li>
                         <li>{{ object.description }}</li>
                     </ul>
-                    <button type="button" class="w-100 btn btn-lg btn-outline-primary" href="/product_info/"> О товаре </button>
+                    <a href="{% url 'shop:product_info' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> О товаре </a>
                 </div>
             </div>
         </div>
