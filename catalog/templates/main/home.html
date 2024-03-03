@@ -22,7 +22,7 @@
                     <h1 align="center" class="card-title pricing-card-title">{{ object.price }} руб.</h1>
                     <ul align="center" class="list-unstyled mt-3 mb-4">
                         <li>{{ object.category }}</li>
-                        <li>{{ object.description }}</li>
+                        <li>{{ object.description | truncatechars:100 }}</li>
                     </ul>
                     <a href="{% url 'shop:product_info' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> О товаре </a>
                 </div>
