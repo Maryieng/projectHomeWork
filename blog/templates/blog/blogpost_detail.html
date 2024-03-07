@@ -1,0 +1,20 @@
+{% extends 'catalog/base.html' %}
+{% load tag %}
+
+{% block content %}
+
+
+<h1 align="center"> {{ object|title }} </h1>
+
+<div class="card px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" style="width: 24rem;">
+  <div class="card-body">
+    <img class="card-img-top" src="{{ object.preview | mymedia }}">
+    <p class="card-text"> {{ object.content }}</p>
+    <p class="card-text">{{ object.created_at }}</p>
+    <p class="card-text"> Просмотров: {{ object.view_count }}</p>
+    <div class="d-grid gap-2 mx-auto">
+    <a href="{% url 'blog:blog_list' %}" class="w-100 btn btn-lg btn-outline-warning"> Назад </a>
+    </div>
+    </div>
+</div>
+{% endblock %}

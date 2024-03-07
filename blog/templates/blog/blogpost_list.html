@@ -26,7 +26,8 @@
                         <li>{{ object.created_at }}</li>
                         <li>Просмотров: {{ object.view_count }}</li>
                     </ul>
-<!--                    <a href="{% url 'shop:product_info' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> Подробнее </a>-->
+                    <a href="{% url 'blog:view' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> Подробнее </a>
+                    <a href="{% url 'blog:edit' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> Редактировать новость </a>
                 </div>
             </div>
         </div>
