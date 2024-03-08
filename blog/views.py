@@ -28,7 +28,6 @@ class BlogpostListView(ListView):
 class BlogpostDetailView(DetailView):
     model = Blogpost
 
-
     def get_object(self, queryset=None):
         self.object = super().get_object(queryset)
         self.object.view_count += 1
@@ -39,13 +38,16 @@ class BlogpostDetailView(DetailView):
 class BlogpostUpdateView(UpdateView):
     model = Blogpost
     fields = ('title', 'content', 'publication_sign')
-    success_url = reverse_lazy('blog:blog_list')
 
     def form_valid(self, form):
         if form.is_valid():
             new_mat = form.save()
             new_mat.slug = slugify(new_mat.title)
         return super().form_valid(form)
+
+    def get_success_url(self):
+        from django.urls import reverse
+        return reverse('blog:view', args=[self.kwargs.get('pk')])
 
 
 class BlogpostDeleteView(DeleteView):
