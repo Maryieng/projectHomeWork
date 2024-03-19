@@ -17,7 +17,7 @@
     <p class="card-text">Дата последнего изменения: {{ object.updated_at }}</p>
     <div class="d-grid gap-2 mx-auto">
     <a href="#" class="btn btn-success"> Стоимость {{object.price | floatformat:'2'}} руб</a>
-    <a href="{% url 'shop:home' %}" class="w-100 btn btn-lg btn-outline-warning"> Назад </a>
+    <a href="{% url 'shop:list_products' %}" class="w-100 btn btn-lg btn-outline-warning"> Назад </a>
     </div>
     </div>
 </div>
