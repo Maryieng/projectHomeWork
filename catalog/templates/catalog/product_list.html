@@ -6,10 +6,12 @@
 {% block content %}
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <a class="w-100 btn btn-lg btn-outline-primary" href="{% url 'shop:create_product' %}"> Добавить товар </a>
     <h1 class="display-4">Technology for life</h1>
     <p class="lead"> Онлайн магазин электроники </p>
 </div>
+<div class="col-12 mb-5 text-center">
+            <a class="w-100 btn btn-lg btn-outline-primary" href="{% url 'shop:create_product' %}"> Добавить товар </a>
+    </div>
     <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for object in object_list %}
@@ -27,6 +29,7 @@
                     </ul>
                     <a href="{% url 'shop:product_info' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> О товаре </a>
                     <a href="{% url 'shop:edit_product' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> Редактировать товар </a>
+                    <a href="{% url 'shop:delete_product' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> Удалить товар </a>
                 </div>
             </div>
         </div>
