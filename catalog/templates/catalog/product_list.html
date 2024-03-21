@@ -26,6 +26,7 @@
                     <ul align="center" class="list-unstyled mt-3 mb-4">
                         <li>{{ object.category }}</li>
                         <li>{{ object.description | truncatechars:100 }}</li>
+                        <li> Активная версия: {{ object.active_version }}</li>
                     </ul>
                     <a href="{% url 'shop:product_info' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> О товаре </a>
                     <a href="{% url 'shop:edit_product' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> Редактировать товар </a>
