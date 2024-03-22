@@ -20,8 +20,8 @@ class ProductForm(StyleFormMixin, forms.ModelForm):
         model = Product
         exclude = ('created_at', 'updated_at', )
 
-    def clean_name(self):
-        cleaned_data = self.cleaned_data.get('product_name')
+    def clean_product_name(self):
+        cleaned_data = self.cleaned_data['product_name']
         forbidden_words = ['казино', 'криптовалюта', 'крипта', 'биржа', 'дешево', 'бесплатно', 'обман', 'полиция',
                            'радар']
         for word in forbidden_words:
