@@ -8,10 +8,10 @@
                 <div class="card-body">
                     <form method="post">
                         {% csrf_token %}
-                        <p> Хотите удалить статью: "{{ object.title | truncatechars:40 }}"? </p>
+                        <p> Хотите удалить товар: "{{ object.product_name }}" ? </p>
                         <button Type="submit" class="btn btn-success"> Подтвердить </button>
                     </form>
-                    <a href="{% url 'blog:blog_list' %}" class="btn btn-success" style="margin-top: 10px;"> Вернуться назад </a>
+                    <a href="{% url 'shop:list_products' %}" class="btn btn-success" style="margin-top: 10px;"> Вернуться назад </a>
                 </div>
             </div>
         </div>
