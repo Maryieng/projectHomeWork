@@ -3,10 +3,10 @@ import random
 from django.contrib.auth.hashers import make_password
 from django.core.mail import send_mail
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, FormView
+from django.views.generic import CreateView, FormView, UpdateView
 
 from config import settings
-from users.forms import UserRegisterForm, UserPasswordRecoveryForm
+from users.forms import UserRegisterForm, UserPasswordRecoveryForm, UserProfileForm
 from users.models import User
 import string
 
@@ -55,3 +55,12 @@ class UserPasswordRecoveryView(FormView):
             fail_silently=False,
         )
         return super().form_valid(form)
+
+
+class ProfileView(UpdateView):
+    model = User
+    form_class = UserProfileForm
+    success_url = reverse_lazy('users:profile')
+
+    def get_object(self, queryset=None):
+        return self.request.user
