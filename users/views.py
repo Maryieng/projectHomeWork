@@ -36,6 +36,7 @@ class RegisterView(CreateView):
         )
         return super().form_valid(form)
 
+
 class UserPasswordRecoveryView(FormView):
     template_name = 'users/user_recovery_password.html'
     form_class = UserPasswordRecoveryForm

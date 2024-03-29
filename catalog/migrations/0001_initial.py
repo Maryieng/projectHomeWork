@@ -35,7 +35,8 @@ class Migration(migrations.Migration):
                 ('created_at', models.DateField(auto_now_add=True, verbose_name='Дата создания')),
                 ('updated_at', models.DateField(auto_now=True, verbose_name='Дата последнего изменения')),
                 ('manufactured_at', models.DateField(verbose_name='Дата производства продукта')),
-                ('сategory', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='catalog.category', verbose_name='Категория')),
+                ('сategory', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='catalog.category',
+                                               verbose_name='Категория')),
             ],
             options={
                 'verbose_name': 'Товар',
