@@ -25,18 +25,6 @@ class RegisterView(CreateView):
     template_name = 'users/register.html'
     success_url = reverse_lazy('users:login')
 
-    # def form_valid(self, form):
-    #     super().form_valid(form)
-    #     email = form.cleaned_data.get('email')
-    #     send_mail(
-    #         'Поздравляем с регистрацией на сайте!',
-    #         'Добро Пожаловать!',
-    #         settings.EMAIL_HOST_USER,
-    #         [email],
-    #         fail_silently=False,
-    #     )
-    #     return super().form_valid(form)
-
     def form_valid(self, form):
         new_user = form.save()
         new_user.is_active = False
