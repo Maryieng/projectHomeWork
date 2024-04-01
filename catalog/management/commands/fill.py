@@ -3,12 +3,12 @@ import json
 from catalog.models import Category, Product
 from django.db import connection
 
+
 class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         with connection.cursor() as cursor:
-            cursor.execute(f'TRUNCATE TABLE catalog_category RESTART IDENTITY CASCADE;')
-
+            cursor.execute('TRUNCATE TABLE catalog_category RESTART IDENTITY CASCADE;')
 
         Category.objects.all().delete()
         Product.objects.all().delete()
@@ -22,7 +22,8 @@ class Command(BaseCommand):
             for category in data:
                 if category["model"] == "catalog.category":
                     category_for_create.append(Category(category_name=category["fields"]['category_name'],
-                                                        category_description=category["fields"]['category_description']))
+                                                        category_description=category["fields"]['category_description'])
+                                               )
             Category.objects.bulk_create(category_for_create)
             for product in data:
                 if product["model"] == "catalog.product":

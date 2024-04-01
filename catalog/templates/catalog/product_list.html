@@ -10,7 +10,9 @@
     <p class="lead"> Онлайн магазин электроники </p>
 </div>
 <div class="col-12 mb-5 text-center">
+                        {% if perms.catalog.change_category and perms.catalog.change_description and perms.catalog.set_published or product.owner == request.user or user.is_superuser%}
             <a class="w-100 btn btn-lg btn-outline-primary" href="{% url 'shop:create_product' %}"> Добавить товар </a>
+    {% endif %}
     </div>
     <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -29,8 +31,10 @@
                         <li> Активная версия: {{ object.active_version }}</li>
                     </ul>
                     <a href="{% url 'shop:product_info' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> О товаре </a>
+                    {% if perms.catalog.change_category and perms.catalog.change_description and perms.catalog.set_published or product.owner == request.user or user.is_superuser%}
                     <a href="{% url 'shop:edit_product' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> Редактировать товар </a>
                     <a href="{% url 'shop:delete_product' object.pk %}" class="w-100 btn btn-lg btn-outline-primary"> Удалить товар </a>
+                    {% endif %}
                 </div>
             </div>
         </div>

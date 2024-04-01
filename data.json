@@ -1,5 +1,148 @@
 [
   {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2024-03-03T09:11:13.988Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "Морозильная камера",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2024-03-03T09:28:20.626Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Стационарный блок",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2024-03-03T09:28:28.671Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Ноутбук",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2024-03-03T09:28:46.512Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Холодильный шкаф",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2024-03-03T09:28:56.763Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Индукционная плита",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2024-03-03T09:29:03.854Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Смартфон",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2024-03-08T09:35:24.049Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "Программиста Google обвинили в краже ИИ-технологий для китайских фирм",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e \\u043f\\u0440\\u043e\\u0441\\u043c\\u043e\\u0442\\u0440\\u043e\\u0432\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2024-03-08T09:36:14.653Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Новейшие Samsung Galaxy A55 и Galaxy A35 поступили в продажу в Европе",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2024-03-08T09:36:20.154Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Новейшие Samsung Galaxy A55 и Galaxy A35 поступили в продажу в Европе",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e \\u043f\\u0440\\u043e\\u0441\\u043c\\u043e\\u0442\\u0440\\u043e\\u0432\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2024-03-08T09:37:08.607Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Теперь «полетит» даже на старых ПК: системные требования Alan Wake II официально понизили через несколько месяцев после релиза",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2024-03-08T09:40:13.697Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Теперь «полетит» даже на старых ПК: системные требования Alan Wake II официально понизили через несколько месяцев после релиза",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u043b\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e \\u043f\\u0440\\u043e\\u0441\\u043c\\u043e\\u0442\\u0440\\u043e\\u0432\"]}}]"
+    }
+  },
+  {
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -288,11 +431,83 @@
     }
   },
   {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add Запись",
+      "content_type": 9,
+      "codename": "add_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change Запись",
+      "content_type": 9,
+      "codename": "change_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete Запись",
+      "content_type": 9,
+      "codename": "delete_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view Запись",
+      "content_type": 9,
+      "codename": "view_blogpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add Версия",
+      "content_type": 10,
+      "codename": "add_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change Версия",
+      "content_type": 10,
+      "codename": "change_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete Версия",
+      "content_type": 10,
+      "codename": "delete_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view Версия",
+      "content_type": 10,
+      "codename": "view_version"
+    }
+  },
+  {
     "model": "auth.user",
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$720000$sTuhntvKkUq5C5rF7aaKnp$vImZhpXqAY7sN3lloBEdEQrZ/HDb2UvErtO0ICghE7I=",
-      "last_login": "2024-02-22T17:23:02.073Z",
+      "last_login": "2024-03-08T09:34:58.765Z",
       "is_superuser": true,
       "username": "admin",
       "first_name": "",
@@ -370,11 +585,51 @@
     }
   },
   {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "blog",
+      "model": "blogpost"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "catalog",
+      "model": "version"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "6xrz534qsyda0lkb7gtve5jbr48z95jt",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSEwdHi4dO83EGBAqgaS0q6M_65NutDtPefcF_NhW6vfRl78TOzMJDv9bjGkR247oHtot85Tb-syR74r_KCDXzvl5-Vw_w5qGPVbR9LCkbAa42RAywIWgiGJ0jggJJXARIxIYAiouCkXKVAXW5QyIQN7fwDKoDd6:1rfjaf:4LS8ms7JE7bP2tvub3ZoASNxTM6M0Ap9dXfnhdydqKk",
+      "expire_date": "2024-03-14T16:49:01.664Z"
+    }
+  },
+  {
     "model": "sessions.session",
     "pk": "8u43vvd0c2mc6nb6n5ixvxxni7n2zvp1",
     "fields": {
       "session_data": ".eJxVjMsOwiAQRf-FtSEwdHi4dO83EGBAqgaS0q6M_65NutDtPefcF_NhW6vfRl78TOzMJDv9bjGkR247oHtot85Tb-syR74r_KCDXzvl5-Vw_w5qGPVbR9LCkbAa42RAywIWgiGJ0jggJJXARIxIYAiouCkXKVAXW5QyIQN7fwDKoDd6:1rdCmk:DeWBwXbi2WrQ5RkaIrN9CBGrirRQxpUhPKbUFrdvi64",
       "expire_date": "2024-03-07T17:23:02.075Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "g8d5z22dz047sx4mv3z987mnut1ekval",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSEwdHi4dO83EGBAqgaS0q6M_65NutDtPefcF_NhW6vfRl78TOzMJDv9bjGkR247oHtot85Tb-syR74r_KCDXzvl5-Vw_w5qGPVbR9LCkbAa42RAywIWgiGJ0jggJJXARIxIYAiouCkXKVAXW5QyIQN7fwDKoDd6:1rfjRO:qaC1oDhaU5xZ1N9Ka0Dfy34yaQRKMZUqO5WE4LjeV8U",
+      "expire_date": "2024-03-14T16:39:26.759Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "q97cxf676fjja2yd4xaadflh5sjggj3e",
+    "fields": {
+      "session_data": ".eJxtjMsOgjAQRf9l1oTQoQ9g6d4vMKZpmamghhpadGH8dyVhQ-L2nHPvG54jv5jsI6ZsFXR5XrjYQfkHJuhO8lyAdUse7JJ4tiNBBwJ2zLv-xtMq6OqmSyz7OOV59OWalJtN5TES3w9buzsYXBp-a0-6aqlqtPLSoBYBG3SGhBKmRVJU92i88orQEFJoJQdRKR2aUNfGMcLnCztMTXk:1riWd0:kZYjot_KuOCIxkQgmLCRqTOA76onBFB8OqNZeU5v_lQ",
+      "expire_date": "2024-03-22T09:34:58.768Z"
     }
   },
   {
@@ -411,80 +666,149 @@
   },
   {
     "model": "catalog.product",
-    "pk": 4,
+    "pk": 1,
     "fields": {
       "product_name": "Смартфон",
       "description": "Телефон с сенсорным экраном",
-      "preview": "",
+      "preview": "preview/phone.jpg",
       "category": 4,
       "price": 80000,
-      "created_at": "2024-02-23",
-      "updated_at": "2024-02-23"
+      "created_at": "2024-02-26",
+      "updated_at": "2024-03-03",
+      "is_published": false
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "product_name": "Индукционная плита",
+      "description": "Техника для дома",
+      "preview": "preview/плита.jpg",
+      "category": 1,
+      "price": 40000,
+      "created_at": "2024-02-26",
+      "updated_at": "2024-03-03",
+      "is_published": false
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "product_name": "Холодильный шкаф",
+      "description": "Техника для дома",
+      "preview": "preview/холодильник.jpg",
+      "category": 2,
+      "price": 58000,
+      "created_at": "2024-02-26",
+      "updated_at": "2024-03-03",
+      "is_published": false
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "product_name": "Ноутбук",
+      "description": "Техника для работы и учебы",
+      "preview": "preview/ноут.jpg",
+      "category": 3,
+      "price": 110000,
+      "created_at": "2024-02-26",
+      "updated_at": "2024-03-21",
+      "is_published": false
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "product_name": "Стационарный блок",
+      "description": "Техника для работы и учебы",
+      "preview": "preview/блок.jpg",
+      "category": 3,
+      "price": 70000,
+      "created_at": "2024-02-26",
+      "updated_at": "2024-03-03",
+      "is_published": false
     }
   },
   {
     "model": "catalog.product",
     "pk": 6,
     "fields": {
-      "product_name": "Индукционная плита",
-      "description": "Техника для дома",
-      "preview": "",
-      "category": 1,
-      "price": 40000,
-      "created_at": "2024-02-23",
-      "updated_at": "2024-02-23"
-    }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 7,
-    "fields": {
-      "product_name": "Холодильный шкаф",
-      "description": "Техника для дома",
-      "preview": "",
-      "category": 2,
-      "price": 58000,
-      "created_at": "2024-02-23",
-      "updated_at": "2024-02-23"
-    }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 8,
-    "fields": {
-      "product_name": "Ноутбук",
-      "description": "Техника для работы и учебы",
-      "preview": "",
-      "category": 3,
-      "price": 110000,
-      "created_at": "2024-02-23",
-      "updated_at": "2024-02-23"
-    }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 9,
-    "fields": {
-      "product_name": "Стационарный блок",
-      "description": "Техника для работы и учебы",
-      "preview": "",
-      "category": 3,
-      "price": 70000,
-      "created_at": "2024-02-23",
-      "updated_at": "2024-02-23"
-    }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 10,
-    "fields": {
       "product_name": "Морозильная камера",
       "description": "Техника для дома",
-      "preview": "",
+      "preview": "preview/морозильная_камераъ.jpg",
       "category": 2,
       "price": 40000,
-      "created_at": "2024-02-23",
-      "updated_at": "2024-02-23"
+      "created_at": "2024-02-26",
+      "updated_at": "2024-03-19",
+      "is_published": false
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 19,
+    "fields": {
+      "product_name": "2цу34к56789",
+      "description": "34567890",
+      "preview": "",
+      "category": 2,
+      "price": 23456,
+      "created_at": "2024-03-24",
+      "updated_at": "2024-03-24",
+      "is_published": false
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 1,
+    "fields": {
+      "product": 4,
+      "number_version": 1,
+      "name": "Befor",
+      "is_active": true
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 4,
+    "fields": {
+      "title": "Теперь «полетит» даже на старых ПК: системные требования Alan Wake II официально понизили через несколько месяцев после релиза",
+      "slug": "teper-poletit-dazhe-na-staryih-pk-sistemnyie-trebovaniya-alan-wake-ii-ofitsialno-ponizili-cherez-neskolko-mesyatsev-posle-reliza",
+      "content": "Разработчики из Remedy сообщили о выпуске долгожданного патча для Alan Wake II, который повысил производительность ПК с видеокартами без поддержки Mesh Shaders. Это сильно повысило производительность на ПК с видеокартами GTX 10-й серии. Remedy также улучшила работу Alan Wake II на видеокартах Radeon, в связи с чем студии удалось снизить минимальные системные требования игры. На новых видеокартах прирост не такой большой, но на RTX 4070, например, игра выдаёт на 14% больше кадров в секунду, чем раньше.\r\n\r\nНовые минимальные требования включают Intel i5-7600K или эквивалент от AMD, 16 ГБ ОЗУ и GeForce GTX 1070 / Radeon RX 5600 XT. В рекомендованных указаны Ryzen 7 3700X или аналог от Intel, а также GeForce RTX 3060 / Radeon RX 6600 XT.",
+      "preview": "blogpost/1.jpg",
+      "created_at": "2024-03-07",
+      "publication_sign": true,
+      "view_count": 13
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 5,
+    "fields": {
+      "title": "Новейшие Samsung Galaxy A55 и Galaxy A35 поступили в продажу в Европе",
+      "slug": "novejshie-samsung-galaxy-a55-i-galaxy-a35-postupili-v-prodazhu-v-evrope",
+      "content": "Несмотря на то что официальная премьера Samsung Galaxy A55 и Galaxy A35 запланирована на 11 марта, немецкий ретейлер уже начал продавать эти смартфоны. По слухам, аппараты должны были оказаться чуть дешевле предшественников, и сейчас эти данные подтвердились. Стоимость Samsung Galaxy A55 в версии с 8 ГБ ОЗУ и 128 ГБ флеш-памяти — 480 евро, вариант с 256 ГБ флеш-памяти на 50 евро дороже. Стоимость Galaxy A35 выглядит так: 6/128 ГБ — 380 евро, 8/256 ГБ — 450 евро. Оба смартфона имеют слот microSD для расширения памяти. Характеристики Galaxy A55 выглядят так: экран AMOLED с диагональю 6,6 дюйма, разрешением Full HD+, кадровой частотой 120 Гц и защитой в виде закалённого стекла Gorilla Glass Victus, SoC Samsung Exynos 1480, 32-мегапиксельная фронтальная камера, основная камера с датчиками разрешением 50, 12 и 5 Мп.",
+      "preview": "blogpost/2.jpg",
+      "created_at": "2024-03-07",
+      "publication_sign": true,
+      "view_count": 16
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 6,
+    "fields": {
+      "title": "Программиста Google обвинили в краже ИИ-технологий для китайских фирм",
+      "slug": "programmista-google-obvinili-v-krazhe-ii-tehnologij-dlya-kitajskih-firm",
+      "content": "Гражданину Китая Линвэю Дину предъявили обвинение в краже коммерческой тайны у Google — технологий искусственного интеллекта, сообщает Минюст США.\r\n\r\nДин устроился инженером-программистом в Google в 2019 году. В его обязанности входила разработка программного обеспечения, поэтому у него был доступ к конфиденциальной информации. По информации Минюста, весной 2022 года программист начал тайно сохранять на свой аккаунт данные, относящиеся к коммерческой тайне, за год число скаченных файлов превысило 500.\r\n\r\nЛетом 2022 года Дин получил несколько электронных писем от гендиректора молодой китайской технологической компании. Там ему предложили должность технического директора. Он отправился в Китай и провел там почти полгода. По данным Минюста, Дин владеет 20% акций этой компании.\r\nПозднее он создал собственный стартап, специализирующийся на ИИ. Согласно документам проекта Дина, у него есть «опыт работы с вычислительными платформами Google», которые нужно модернизировать и адаптировать по условиям Китая.\r\n\r\nДина задержали 6 марта. Ему грозят до десяти лет заключения и штраф в размере $250 тыс. по каждому из четырех пунктов обвинения.",
+      "preview": "blogpost/d0428516edf3fa67fb611744f241cd69.jpeg",
+      "created_at": "2024-03-08",
+      "publication_sign": true,
+      "view_count": 10
     }
   }
 ]
