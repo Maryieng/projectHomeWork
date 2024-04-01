@@ -35,6 +35,12 @@ class Product(models.Model):
         verbose_name = "Товар"
         verbose_name_plural = "Товары"
 
+        permissions = [
+            ('set_published', 'Can publish products'),
+            ('change_description', 'Can change description'),
+            ('change_category', 'Can change category')
+        ]
+
 
 class Version(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='Товар')

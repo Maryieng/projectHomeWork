@@ -2,9 +2,9 @@ from django.forms import inlineformset_factory
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 
-from catalog.forms import ProductForm, VersionForm
+from catalog.forms import ProductForm, VersionForm, ModeratorProductForm, VersionFormSet
 from catalog.models import Product, Version
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
 class ProductListView(ListView):
@@ -61,17 +61,30 @@ class ProductDetailView(LoginRequiredMixin, DetailView):
         return context_data
 
 
-class ProductCreateView(LoginRequiredMixin, CreateView):
+class ProductCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Product
     login_url = 'users:login'
     form_class = ProductForm
     success_url = reverse_lazy('shop:list_products')
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        VersionFormset = inlineformset_factory(Product, Version, form=VersionForm, formset=VersionFormSet, extra=1)
+        if self.request.method == 'POST':
+            context_data['formset'] = VersionFormset(self.request.POST)
+        else:
+            context_data['formset'] = VersionFormset()
+        context_data['show_create_button'] = not self.request.user.groups.filter(name='moderator').exists()
+        return context_data
 
     def form_valid(self, form):
         self.object = form.save()
         self.object.user = self.request.user
         self.object.save()
         return super().form_valid(form)
+
+    def test_func(self):
+        return not self.request.user.groups.filter(name='moderator').exists()
 
 
 class ProductUpdateView(LoginRequiredMixin, UpdateView):
@@ -82,11 +95,13 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        VersionFormset = inlineformset_factory(Product, Version, form=VersionForm, extra=1)
+        VersionFormset = inlineformset_factory(Product, Version, form=VersionForm, formset=VersionFormSet, extra=1)
         if self.request.method == 'POST':
             context_data['formset'] = VersionFormset(self.request.POST, instance=self.object)
         else:
             context_data['formset'] = VersionFormset(instance=self.object)
+            context_data['request'] = self.request
+            context_data['show_create_button'] = not self.request.user.groups.filter(name='moderator').exists()
         return context_data
 
     def form_valid(self, form):
@@ -98,8 +113,17 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
 
         return super().form_valid(form)
 
+    def get_form_class(self):
+        if self.request.user.has_perm('catalog.set_published') and not self.request.user.is_superuser:
+            return ModeratorProductForm
+        else:
+            return ProductForm
 
-class ProductDeleteView(LoginRequiredMixin, DeleteView):
+
+class ProductDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Product
     login_url = 'users:login'
     success_url = reverse_lazy('shop:list_products')
+
+    def test_func(self):
+        return not self.request.user.groups.filter(name='moderator').exists()
