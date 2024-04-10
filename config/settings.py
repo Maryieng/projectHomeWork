@@ -149,3 +149,14 @@ EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'kass.o@yandex.ru'
 EMAIL_HOST_PASSWORD = os.getenv('MAIL')
+
+
+CACHES_ENABLED = os.getenv('CACHES_ENABLED') == 'True'
+
+if CACHES_ENABLED:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": os.getenv('CACHES_LOCATION'),
+        }
+    }
