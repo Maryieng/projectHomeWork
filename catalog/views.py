@@ -3,8 +3,10 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 
 from catalog.forms import ProductForm, VersionForm, ModeratorProductForm, VersionFormSet
-from catalog.models import Product, Version
+from catalog.models import Product, Version, Category
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+
+from catalog.services import get_cached_categories, get_cached_products
 
 
 class ProductListView(ListView):
@@ -12,6 +14,7 @@ class ProductListView(ListView):
 
     def get_context_data(self, *args, **kwargs):
         context_data = super().get_context_data(*args, **kwargs)
+        context_data['products_list'] = get_cached_products()
         products = Product.objects.all()
 
         for product in products:
@@ -24,6 +27,7 @@ class ProductListView(ListView):
 
         context_data['object_list'] = products
         return context_data
+
 
 
 class ContactsView(TemplateView):
@@ -127,3 +131,12 @@ class ProductDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         return not self.request.user.groups.filter(name='moderator').exists()
+
+
+class CategoryListView(ListView):
+    model = Category
+
+    def get_context_data(self, *args, **kwargs):
+        context_data = super().get_context_data(*args, **kwargs)
+        context_data['categories_list'] = get_cached_categories()
+        return context_data
